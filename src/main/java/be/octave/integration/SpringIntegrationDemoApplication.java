@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.integration.annotation.EndpointId;
+import org.springframework.integration.channel.DirectChannel;
 import org.springframework.integration.core.MessageSource;
 import org.springframework.integration.dsl.IntegrationFlow;
 import org.springframework.integration.dsl.IntegrationFlows;
@@ -50,11 +52,24 @@ public class SpringIntegrationDemoApplication {
 	public IntegrationFlow copyTextFiles() {
 		return IntegrationFlows.from(sourceDirectory(), configurer -> configurer.poller(Pollers.fixedDelay(5000)))
 				.handle(printContent())
+				.channel(printChannel())
 				.handle(targetDirectory())
+				.channel(copyChannel())
 				.get();
 	}
 
 	@Bean
+	public DirectChannel printChannel(){
+		return new DirectChannel();
+	}
+
+	@Bean
+	public DirectChannel copyChannel() {
+		return new DirectChannel();
+	}
+
+	@Bean
+	@EndpointId("print.handler")
 	public GenericHandler<File> printContent() {
 		return (file, messageHeaders) -> {
 			try {
@@ -67,6 +82,7 @@ public class SpringIntegrationDemoApplication {
 	}
 
 	@Bean
+	@EndpointId("copy.handler")
 	public MessageHandler targetDirectory() {
 		logger.info("Output dir : " + OUTPUT_DIR);
 		FileWritingMessageHandler handler = new FileWritingMessageHandler(new File(OUTPUT_DIR));
