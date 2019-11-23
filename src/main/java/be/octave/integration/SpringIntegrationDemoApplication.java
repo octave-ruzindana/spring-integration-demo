@@ -2,11 +2,16 @@ package be.octave.integration;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.integration.annotation.EndpointId;
+import org.springframework.integration.annotation.InboundChannelAdapter;
+import org.springframework.integration.annotation.Poller;
+import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.integration.channel.DirectChannel;
 import org.springframework.integration.core.MessageSource;
 import org.springframework.integration.dsl.IntegrationFlow;
@@ -21,6 +26,8 @@ import org.springframework.integration.file.filters.CompositeFileListFilter;
 import org.springframework.integration.file.filters.RegexPatternFileListFilter;
 import org.springframework.integration.file.support.FileExistsMode;
 import org.springframework.integration.handler.GenericHandler;
+import org.springframework.integration.scheduling.PollerMetadata;
+import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHandler;
 
 import java.io.File;
@@ -36,7 +43,11 @@ import java.util.Arrays;
 @SpringBootApplication
 public class SpringIntegrationDemoApplication {
 
-	static Logger logger = LoggerFactory.getLogger(SpringIntegrationDemoApplication.class);
+	private static final String INPUT_DIRECTORY_CHANNEL = "input.directory.channel";
+	private  static final String PRINT_CHANNEL = "print.channel";
+	private static final String COPY_CHANNEL = "copy.channel";
+
+	private static Logger logger = LoggerFactory.getLogger(SpringIntegrationDemoApplication.class);
 
 	@Value("${user.home}")
 	String INPUT_DIR;
@@ -48,51 +59,10 @@ public class SpringIntegrationDemoApplication {
 		SpringApplication.run(SpringIntegrationDemoApplication.class, args);
 	}
 
-	@Bean
-	public IntegrationFlow copyTextFiles() {
-		return IntegrationFlows.from(sourceDirectory(), configurer -> configurer.poller(Pollers.fixedDelay(5000)))
-				.handle(printContent())
-				.channel(printChannel())
-				.handle(targetDirectory())
-				.channel(copyChannel())
-				.get();
-	}
 
 	@Bean
-	public DirectChannel printChannel(){
-		return new DirectChannel();
-	}
-
-	@Bean
-	public DirectChannel copyChannel() {
-		return new DirectChannel();
-	}
-
-	@Bean
-	@EndpointId("print.handler")
-	public GenericHandler<File> printContent() {
-		return (file, messageHeaders) -> {
-			try {
-				logger.info(new String(Files.readAllBytes(Paths.get(file.getPath()))));
-			} catch (IOException e) {
-				logger.error("Error : ", e);
-			}
-			return file;
-		};
-	}
-
-	@Bean
-	@EndpointId("copy.handler")
-	public MessageHandler targetDirectory() {
-		logger.info("Output dir : " + OUTPUT_DIR);
-		FileWritingMessageHandler handler = new FileWritingMessageHandler(new File(OUTPUT_DIR));
-		handler.setFileExistsMode(FileExistsMode.REPLACE);
-		handler.setExpectReply(false);
-		return handler;
-	}
-
-
-	@Bean
+	@InboundChannelAdapter( value = INPUT_DIRECTORY_CHANNEL, poller = @Poller(fixedDelay = "5000"))
+	@EndpointId("input.directory.source")
 	public MessageSource<File> sourceDirectory() {
 		logger.info("Input dir : " + INPUT_DIR);
 		FileReadingMessageSource messageSource = new FileReadingMessageSource();
@@ -100,6 +70,32 @@ public class SpringIntegrationDemoApplication {
 		messageSource.setScanner(directoryScanner());
 		return messageSource;
 	}
+
+	@Bean
+	@EndpointId("print.handler")
+	@ServiceActivator(inputChannel = INPUT_DIRECTORY_CHANNEL, outputChannel = PRINT_CHANNEL)
+	public GenericHandler<File> printContent() {
+		return new PrintHandler();
+	}
+
+	@Bean
+	@EndpointId("copy.handler")
+	@ServiceActivator(inputChannel = PRINT_CHANNEL)
+	public MessageHandler targetDirectory() {
+		logger.info("Output dir : " + OUTPUT_DIR);
+		FileWritingMessageHandler handler = new FileWritingMessageHandler(new File(OUTPUT_DIR));
+		handler.setFileExistsMode(FileExistsMode.REPLACE);
+		handler.setExpectReply(false);
+		handler.setOutputChannelName(COPY_CHANNEL);
+		return handler;
+	}
+
+	@Bean(COPY_CHANNEL)
+	@EndpointId(COPY_CHANNEL)
+	public MessageChannel copyChannel(){
+		return new DirectChannel();
+	}
+
 
 	@Bean
 	public DirectoryScanner directoryScanner() {

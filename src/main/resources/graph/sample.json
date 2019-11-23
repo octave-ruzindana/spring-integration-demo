@@ -1,0 +1,361 @@
+{
+  "contentDescriptor": {
+    "providerVersion": "5.1.8.RELEASE",
+    "providerFormatVersion": 1.0,
+    "provider": "spring-integration"
+  },
+  "nodes": [
+    {
+      "nodeId": 1,
+      "name": "copy.channel",
+      "stats": {
+        "sendCount": 0,
+        "meanErrorRate": 0.0,
+        "statsEnabled": true,
+        "countsEnabled": true,
+        "meanSendRate": 0.0,
+        "sendRate": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        },
+        "loggingEnabled": true,
+        "errorRate": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        },
+        "sendDuration": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        },
+        "maxSendDuration": 0.0,
+        "standardDeviationSendDuration": 0.0,
+        "sendErrorCount": 0,
+        "timeSinceLastSend": 0.0,
+        "meanErrorRatio": 0.0,
+        "meanSendDuration": 0.0,
+        "minSendDuration": 0.0
+      },
+      "componentType": "channel",
+      "properties": {}
+    },
+    {
+      "nodeId": 2,
+      "name": "nullChannel",
+      "stats": {
+        "sendCount": 0,
+        "meanErrorRate": 0.0,
+        "statsEnabled": true,
+        "countsEnabled": true,
+        "meanSendRate": 0.0,
+        "sendRate": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        },
+        "loggingEnabled": true,
+        "errorRate": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        },
+        "sendDuration": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        },
+        "maxSendDuration": 0.0,
+        "standardDeviationSendDuration": 0.0,
+        "sendErrorCount": 0,
+        "timeSinceLastSend": 0.0,
+        "meanErrorRatio": 0.0,
+        "meanSendDuration": 0.0,
+        "minSendDuration": 0.0
+      },
+      "componentType": "null-channel",
+      "properties": {}
+    },
+    {
+      "nodeId": 3,
+      "name": "errorChannel",
+      "stats": {
+        "sendCount": 0,
+        "meanErrorRate": 0.0,
+        "statsEnabled": true,
+        "countsEnabled": true,
+        "meanSendRate": 0.0,
+        "sendRate": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        },
+        "loggingEnabled": true,
+        "errorRate": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        },
+        "sendDuration": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        },
+        "maxSendDuration": 0.0,
+        "standardDeviationSendDuration": 0.0,
+        "sendErrorCount": 0,
+        "timeSinceLastSend": 0.0,
+        "meanErrorRatio": 0.0,
+        "meanSendDuration": 0.0,
+        "minSendDuration": 0.0
+      },
+      "componentType": "publish-subscribe-channel",
+      "properties": {}
+    },
+    {
+      "nodeId": 4,
+      "name": "print.channel",
+      "stats": {
+        "sendCount": 3,
+        "meanErrorRate": 0.0,
+        "statsEnabled": true,
+        "countsEnabled": true,
+        "meanSendRate": 0.07134324197229343,
+        "sendRate": {
+          "count": 3,
+          "min": 5.004417237997055,
+          "max": 5.013470673084259,
+          "mean": 0.07134314184476208,
+          "standardDeviation": 9.375982731984487E-5,
+          "countLong": 3
+        },
+        "loggingEnabled": true,
+        "errorRate": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        },
+        "sendDuration": {
+          "count": 3,
+          "min": 2.771626,
+          "max": 11.816508,
+          "mean": 5.6590006199262,
+          "standardDeviation": 4.027074511880619,
+          "countLong": 3
+        },
+        "maxSendDuration": 11.816508,
+        "standardDeviationSendDuration": 4.027074511880619,
+        "sendErrorCount": 0,
+        "timeSinceLastSend": 27017.69888794422,
+        "meanErrorRatio": 0.0,
+        "meanSendDuration": 5.6590006199262,
+        "minSendDuration": 2.771626
+      },
+      "componentType": "channel",
+      "properties": {}
+    },
+    {
+      "nodeId": 5,
+      "name": "input.directory.channel",
+      "stats": {
+        "sendCount": 3,
+        "meanErrorRate": 0.0,
+        "statsEnabled": true,
+        "countsEnabled": true,
+        "meanSendRate": 0.07131451932253073,
+        "sendRate": {
+          "count": 3,
+          "min": 5.0045348429679875,
+          "max": 5.020609501004219,
+          "mean": 0.0713144663984398,
+          "standardDeviation": 1.6612148052391832E-4,
+          "countLong": 3
+        },
+        "loggingEnabled": true,
+        "errorRate": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        },
+        "sendDuration": {
+          "count": 3,
+          "min": 3.390869,
+          "max": 19.722119,
+          "mean": 8.491878372693728,
+          "standardDeviation": 7.337760478405325,
+          "countLong": 3
+        },
+        "maxSendDuration": 19.722119,
+        "standardDeviationSendDuration": 7.337760478405325,
+        "sendErrorCount": 0,
+        "timeSinceLastSend": 27018.877503037453,
+        "meanErrorRatio": 0.0,
+        "meanSendDuration": 8.491878372693728,
+        "minSendDuration": 3.390869
+      },
+      "componentType": "channel",
+      "properties": {}
+    },
+    {
+      "nodeId": 6,
+      "name": "input.directory.source",
+      "stats": {
+        "messageCount": 3
+      },
+      "componentType": "file:inbound-channel-adapter",
+      "properties": {},
+      "output": "input.directory.channel",
+      "errors": null
+    },
+    {
+      "nodeId": 7,
+      "name": "_org.springframework.integration.errorLogger",
+      "stats": {
+        "duration": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        },
+        "activeCount": 0,
+        "errorCount": 0,
+        "handleCount": 0,
+        "meanDuration": 0.0,
+        "minDuration": 0.0,
+        "maxDuration": 0.0,
+        "statsEnabled": true,
+        "countsEnabled": true,
+        "loggingEnabled": true,
+        "standardDeviationDuration": 0.0
+      },
+      "componentType": "logging-channel-adapter",
+      "properties": {},
+      "output": null,
+      "input": "errorChannel"
+    },
+    {
+      "nodeId": 8,
+      "name": "copy.handler",
+      "stats": {
+        "duration": {
+          "count": 3,
+          "min": 2.759651,
+          "max": 11.75407,
+          "mean": 5.631658634686347,
+          "standardDeviation": 4.0041767891136155,
+          "countLong": 3
+        },
+        "activeCount": 0,
+        "errorCount": 0,
+        "handleCount": 3,
+        "meanDuration": 5.631658634686347,
+        "minDuration": 2.759651,
+        "maxDuration": 11.75407,
+        "statsEnabled": true,
+        "countsEnabled": true,
+        "loggingEnabled": true,
+        "standardDeviationDuration": 4.0041767891136155
+      },
+      "componentType": "message-handler",
+      "properties": {},
+      "output": "copy.channel",
+      "input": "print.channel"
+    },
+    {
+      "nodeId": 9,
+      "name": "print.handler",
+      "stats": {
+        "duration": {
+          "count": 3,
+          "min": 3.375901,
+          "max": 19.107152,
+          "mean": 8.297290597785977,
+          "standardDeviation": 7.063471491356601,
+          "countLong": 3
+        },
+        "activeCount": 0,
+        "errorCount": 0,
+        "handleCount": 3,
+        "meanDuration": 8.297290597785977,
+        "minDuration": 3.375901,
+        "maxDuration": 19.107152,
+        "statsEnabled": true,
+        "countsEnabled": true,
+        "loggingEnabled": true,
+        "standardDeviationDuration": 7.063471491356601
+      },
+      "componentType": "service-activator",
+      "properties": {},
+      "output": "print.channel",
+      "input": "input.directory.channel"
+    }
+  ],
+  "links": [
+    {
+      "from": 6,
+      "to": 5,
+      "type": "output"
+    },
+    {
+      "from": 3,
+      "to": 7,
+      "type": "input"
+    },
+    {
+      "from": 4,
+      "to": 8,
+      "type": "input"
+    },
+    {
+      "from": 8,
+      "to": 1,
+      "type": "output"
+    },
+    {
+      "from": 5,
+      "to": 9,
+      "type": "input"
+    },
+    {
+      "from": 9,
+      "to": 4,
+      "type": "output"
+    }
+  ]
+}
