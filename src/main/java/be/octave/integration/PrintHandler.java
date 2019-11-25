@@ -15,6 +15,9 @@ public class PrintHandler implements GenericHandler<File> {
 
     @Override
     public Object handle(File file, MessageHeaders messageHeaders) {
+        if(file.getName().contains("invalid")) {
+            throw new IllegalArgumentException("THIS FILE IS NOT ALLOWED");
+        }
         try {
             logger.info(new String(Files.readAllBytes(Paths.get(file.getPath()))));
         } catch (IOException e) {

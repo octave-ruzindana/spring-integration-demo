@@ -7,112 +7,37 @@
   "nodes": [
     {
       "nodeId": 1,
-      "name": "copy.channel",
-      "stats": {
-        "sendCount": 0,
-        "meanErrorRate": 0.0,
-        "statsEnabled": true,
-        "countsEnabled": true,
-        "meanSendRate": 0.0,
-        "sendRate": {
-          "count": 0,
-          "min": 0.0,
-          "max": 0.0,
-          "mean": 0.0,
-          "standardDeviation": 0.0,
-          "countLong": 0
-        },
-        "loggingEnabled": true,
-        "errorRate": {
-          "count": 0,
-          "min": 0.0,
-          "max": 0.0,
-          "mean": 0.0,
-          "standardDeviation": 0.0,
-          "countLong": 0
-        },
-        "sendDuration": {
-          "count": 0,
-          "min": 0.0,
-          "max": 0.0,
-          "mean": 0.0,
-          "standardDeviation": 0.0,
-          "countLong": 0
-        },
-        "maxSendDuration": 0.0,
-        "standardDeviationSendDuration": 0.0,
-        "sendErrorCount": 0,
-        "timeSinceLastSend": 0.0,
-        "meanErrorRatio": 0.0,
-        "meanSendDuration": 0.0,
-        "minSendDuration": 0.0
-      },
-      "componentType": "channel",
-      "properties": {}
-    },
-    {
-      "nodeId": 2,
-      "name": "nullChannel",
-      "stats": {
-        "sendCount": 0,
-        "meanErrorRate": 0.0,
-        "statsEnabled": true,
-        "countsEnabled": true,
-        "meanSendRate": 0.0,
-        "sendRate": {
-          "count": 0,
-          "min": 0.0,
-          "max": 0.0,
-          "mean": 0.0,
-          "standardDeviation": 0.0,
-          "countLong": 0
-        },
-        "loggingEnabled": true,
-        "errorRate": {
-          "count": 0,
-          "min": 0.0,
-          "max": 0.0,
-          "mean": 0.0,
-          "standardDeviation": 0.0,
-          "countLong": 0
-        },
-        "sendDuration": {
-          "count": 0,
-          "min": 0.0,
-          "max": 0.0,
-          "mean": 0.0,
-          "standardDeviation": 0.0,
-          "countLong": 0
-        },
-        "maxSendDuration": 0.0,
-        "standardDeviationSendDuration": 0.0,
-        "sendErrorCount": 0,
-        "timeSinceLastSend": 0.0,
-        "meanErrorRatio": 0.0,
-        "meanSendDuration": 0.0,
-        "minSendDuration": 0.0
-      },
-      "componentType": "null-channel",
-      "properties": {}
-    },
-    {
-      "nodeId": 3,
       "name": "errorChannel",
       "stats": {
-        "sendCount": 0,
-        "meanErrorRate": 0.0,
+        "loggingEnabled": true,
         "statsEnabled": true,
         "countsEnabled": true,
-        "meanSendRate": 0.0,
+        "sendCount": 1,
+        "standardDeviationSendDuration": 0.0,
+        "sendErrorCount": 0,
+        "meanErrorRatio": 0.0,
+        "meanSendDuration": 0.402422,
+        "timeSinceLastSend": 3862.974529981613,
+        "minSendDuration": 0.402422,
+        "maxSendDuration": 0.402422,
+        "meanErrorRate": 0.0,
         "sendRate": {
-          "count": 0,
-          "min": 0.0,
-          "max": 0.0,
-          "mean": 0.0,
+          "count": 1,
+          "min": 5.131968034029007,
+          "max": 5.131968034029007,
+          "mean": 0.11117133206569449,
           "standardDeviation": 0.0,
-          "countLong": 0
+          "countLong": 1
         },
-        "loggingEnabled": true,
+        "sendDuration": {
+          "count": 1,
+          "min": 0.402422,
+          "max": 0.402422,
+          "mean": 0.402422,
+          "standardDeviation": 0.0,
+          "countLong": 1
+        },
+        "meanSendRate": 0.11115795632085519,
         "errorRate": {
           "count": 0,
           "min": 0.0,
@@ -120,45 +45,73 @@
           "mean": 0.0,
           "standardDeviation": 0.0,
           "countLong": 0
-        },
-        "sendDuration": {
-          "count": 0,
-          "min": 0.0,
-          "max": 0.0,
-          "mean": 0.0,
-          "standardDeviation": 0.0,
-          "countLong": 0
-        },
-        "maxSendDuration": 0.0,
-        "standardDeviationSendDuration": 0.0,
-        "sendErrorCount": 0,
-        "timeSinceLastSend": 0.0,
-        "meanErrorRatio": 0.0,
-        "meanSendDuration": 0.0,
-        "minSendDuration": 0.0
+        }
       },
       "componentType": "publish-subscribe-channel",
       "properties": {}
     },
     {
-      "nodeId": 4,
-      "name": "print.channel",
+      "nodeId": 2,
+      "name": "illegal-argument-channel",
       "stats": {
-        "sendCount": 3,
-        "meanErrorRate": 0.0,
+        "loggingEnabled": true,
         "statsEnabled": true,
         "countsEnabled": true,
-        "meanSendRate": 0.07134324197229343,
+        "sendCount": 1,
+        "standardDeviationSendDuration": 0.0,
+        "sendErrorCount": 0,
+        "meanErrorRatio": 0.0,
+        "meanSendDuration": 0.248467,
+        "timeSinceLastSend": 3865.798756957054,
+        "minSendDuration": 0.248467,
+        "maxSendDuration": 0.248467,
+        "meanErrorRate": 0.0,
         "sendRate": {
-          "count": 3,
-          "min": 5.004417237997055,
-          "max": 5.013470673084259,
-          "mean": 0.07134314184476208,
-          "standardDeviation": 9.375982731984487E-5,
-          "countLong": 3
+          "count": 1,
+          "min": 5.131964612007141,
+          "max": 5.131964612007141,
+          "mean": 0.11113739957659256,
+          "standardDeviation": 0.0,
+          "countLong": 1
         },
-        "loggingEnabled": true,
+        "sendDuration": {
+          "count": 1,
+          "min": 0.248467,
+          "max": 0.248467,
+          "mean": 0.248467,
+          "standardDeviation": 0.0,
+          "countLong": 1
+        },
+        "meanSendRate": 0.11113555084314708,
         "errorRate": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        }
+      },
+      "componentType": "channel",
+      "properties": {}
+    },
+    {
+      "nodeId": 3,
+      "name": "unexpectedErrorChannel",
+      "stats": {
+        "loggingEnabled": true,
+        "statsEnabled": true,
+        "countsEnabled": true,
+        "sendCount": 0,
+        "standardDeviationSendDuration": 0.0,
+        "sendErrorCount": 0,
+        "meanErrorRatio": 0.0,
+        "meanSendDuration": 0.0,
+        "timeSinceLastSend": 0.0,
+        "minSendDuration": 0.0,
+        "maxSendDuration": 0.0,
+        "meanErrorRate": 0.0,
+        "sendRate": {
           "count": 0,
           "min": 0.0,
           "max": 0.0,
@@ -167,43 +120,88 @@
           "countLong": 0
         },
         "sendDuration": {
-          "count": 3,
-          "min": 2.771626,
-          "max": 11.816508,
-          "mean": 5.6590006199262,
-          "standardDeviation": 4.027074511880619,
-          "countLong": 3
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
         },
-        "maxSendDuration": 11.816508,
-        "standardDeviationSendDuration": 4.027074511880619,
+        "meanSendRate": 0.0,
+        "errorRate": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        }
+      },
+      "componentType": "channel",
+      "properties": {}
+    },
+    {
+      "nodeId": 4,
+      "name": "copy-channel",
+      "stats": {
+        "loggingEnabled": true,
+        "statsEnabled": true,
+        "countsEnabled": true,
+        "sendCount": 0,
+        "standardDeviationSendDuration": 0.0,
         "sendErrorCount": 0,
-        "timeSinceLastSend": 27017.69888794422,
         "meanErrorRatio": 0.0,
-        "meanSendDuration": 5.6590006199262,
-        "minSendDuration": 2.771626
+        "meanSendDuration": 0.0,
+        "timeSinceLastSend": 0.0,
+        "minSendDuration": 0.0,
+        "maxSendDuration": 0.0,
+        "meanErrorRate": 0.0,
+        "sendRate": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        },
+        "sendDuration": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        },
+        "meanSendRate": 0.0,
+        "errorRate": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        }
       },
       "componentType": "channel",
       "properties": {}
     },
     {
       "nodeId": 5,
-      "name": "input.directory.channel",
+      "name": "nullChannel",
       "stats": {
-        "sendCount": 3,
-        "meanErrorRate": 0.0,
+        "loggingEnabled": true,
         "statsEnabled": true,
         "countsEnabled": true,
-        "meanSendRate": 0.07131451932253073,
+        "sendCount": 0,
+        "standardDeviationSendDuration": 0.0,
+        "sendErrorCount": 0,
+        "meanErrorRatio": 0.0,
+        "meanSendDuration": 0.0,
+        "timeSinceLastSend": 0.0,
+        "minSendDuration": 0.0,
+        "maxSendDuration": 0.0,
+        "meanErrorRate": 0.0,
         "sendRate": {
-          "count": 3,
-          "min": 5.0045348429679875,
-          "max": 5.020609501004219,
-          "mean": 0.0713144663984398,
-          "standardDeviation": 1.6612148052391832E-4,
-          "countLong": 3
-        },
-        "loggingEnabled": true,
-        "errorRate": {
           "count": 0,
           "min": 0.0,
           "max": 0.0,
@@ -212,40 +210,6 @@
           "countLong": 0
         },
         "sendDuration": {
-          "count": 3,
-          "min": 3.390869,
-          "max": 19.722119,
-          "mean": 8.491878372693728,
-          "standardDeviation": 7.337760478405325,
-          "countLong": 3
-        },
-        "maxSendDuration": 19.722119,
-        "standardDeviationSendDuration": 7.337760478405325,
-        "sendErrorCount": 0,
-        "timeSinceLastSend": 27018.877503037453,
-        "meanErrorRatio": 0.0,
-        "meanSendDuration": 8.491878372693728,
-        "minSendDuration": 3.390869
-      },
-      "componentType": "channel",
-      "properties": {}
-    },
-    {
-      "nodeId": 6,
-      "name": "input.directory.source",
-      "stats": {
-        "messageCount": 3
-      },
-      "componentType": "file:inbound-channel-adapter",
-      "properties": {},
-      "output": "input.directory.channel",
-      "errors": null
-    },
-    {
-      "nodeId": 7,
-      "name": "_org.springframework.integration.errorLogger",
-      "stats": {
-        "duration": {
           "count": 0,
           "min": 0.0,
           "max": 0.0,
@@ -253,109 +217,286 @@
           "standardDeviation": 0.0,
           "countLong": 0
         },
-        "activeCount": 0,
-        "errorCount": 0,
-        "handleCount": 0,
-        "meanDuration": 0.0,
-        "minDuration": 0.0,
-        "maxDuration": 0.0,
+        "meanSendRate": 0.0,
+        "errorRate": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        }
+      },
+      "componentType": "null-channel",
+      "properties": {}
+    },
+    {
+      "nodeId": 6,
+      "name": "input-directory-channel",
+      "stats": {
+        "loggingEnabled": true,
         "statsEnabled": true,
         "countsEnabled": true,
-        "loggingEnabled": true,
-        "standardDeviationDuration": 0.0
+        "sendCount": 2,
+        "standardDeviationSendDuration": 0.0,
+        "sendErrorCount": 1,
+        "meanErrorRatio": 0.9375727738918932,
+        "meanSendDuration": 24.443419,
+        "timeSinceLastSend": 3869.311079978943,
+        "minSendDuration": 24.443419,
+        "maxSendDuration": 24.443419,
+        "meanErrorRate": 0.11112152360539143,
+        "sendRate": {
+          "count": 2,
+          "min": 5.025878198027611,
+          "max": 5.025878198027611,
+          "mean": 0.1436650825452486,
+          "standardDeviation": 0.0,
+          "countLong": 2
+        },
+        "sendDuration": {
+          "count": 1,
+          "min": 24.443419,
+          "max": 24.443419,
+          "mean": 24.443419,
+          "standardDeviation": 0.0,
+          "countLong": 1
+        },
+        "meanSendRate": 0.14364773148907886,
+        "errorRate": {
+          "count": 1,
+          "min": 5.131265825986862,
+          "max": 5.131265825986862,
+          "mean": 0.11109972928967347,
+          "standardDeviation": 0.0,
+          "countLong": 1
+        }
       },
-      "componentType": "logging-channel-adapter",
-      "properties": {},
-      "output": null,
-      "input": "errorChannel"
+      "componentType": "channel",
+      "properties": {}
+    },
+    {
+      "nodeId": 7,
+      "name": "print-channel",
+      "stats": {
+        "loggingEnabled": true,
+        "statsEnabled": true,
+        "countsEnabled": true,
+        "sendCount": 1,
+        "standardDeviationSendDuration": 0.0,
+        "sendErrorCount": 0,
+        "meanErrorRatio": 0.0,
+        "meanSendDuration": 16.510438,
+        "timeSinceLastSend": 8889.655434966087,
+        "minSendDuration": 16.510438,
+        "maxSendDuration": 16.510438,
+        "meanErrorRate": 0.0,
+        "sendRate": {
+          "count": 1,
+          "min": 0.11170364904403686,
+          "max": 0.11170364904403686,
+          "mean": 0.11109270392576118,
+          "standardDeviation": 0.0,
+          "countLong": 1
+        },
+        "sendDuration": {
+          "count": 1,
+          "min": 16.510438,
+          "max": 16.510438,
+          "mean": 16.510438,
+          "standardDeviation": 0.0,
+          "countLong": 1
+        },
+        "meanSendRate": 0.11109075640766175,
+        "errorRate": {
+          "count": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "standardDeviation": 0.0,
+          "countLong": 0
+        }
+      },
+      "componentType": "channel",
+      "properties": {}
     },
     {
       "nodeId": 8,
-      "name": "copy.handler",
+      "name": "input-directory-source",
       "stats": {
-        "duration": {
-          "count": 3,
-          "min": 2.759651,
-          "max": 11.75407,
-          "mean": 5.631658634686347,
-          "standardDeviation": 4.0041767891136155,
-          "countLong": 3
-        },
-        "activeCount": 0,
-        "errorCount": 0,
-        "handleCount": 3,
-        "meanDuration": 5.631658634686347,
-        "minDuration": 2.759651,
-        "maxDuration": 11.75407,
-        "statsEnabled": true,
-        "countsEnabled": true,
-        "loggingEnabled": true,
-        "standardDeviationDuration": 4.0041767891136155
+        "messageCount": 2
       },
-      "componentType": "message-handler",
+      "componentType": "file:inbound-channel-adapter",
       "properties": {},
-      "output": "copy.channel",
-      "input": "print.channel"
+      "output": "input-directory-channel",
+      "errors": "errorChannel"
     },
     {
       "nodeId": 9,
-      "name": "print.handler",
+      "name": "illegal-handler",
       "stats": {
         "duration": {
-          "count": 3,
-          "min": 3.375901,
-          "max": 19.107152,
-          "mean": 8.297290597785977,
-          "standardDeviation": 7.063471491356601,
-          "countLong": 3
+          "count": 1,
+          "min": 0.240769,
+          "max": 0.240769,
+          "mean": 0.240769,
+          "standardDeviation": 0.0,
+          "countLong": 1
         },
         "activeCount": 0,
-        "errorCount": 0,
-        "handleCount": 3,
-        "meanDuration": 8.297290597785977,
-        "minDuration": 3.375901,
-        "maxDuration": 19.107152,
-        "statsEnabled": true,
-        "countsEnabled": true,
         "loggingEnabled": true,
-        "standardDeviationDuration": 7.063471491356601
+        "errorCount": 0,
+        "minDuration": 0.240769,
+        "maxDuration": 0.240769,
+        "statsEnabled": true,
+        "handleCount": 1,
+        "meanDuration": 0.240769,
+        "standardDeviationDuration": 0.0,
+        "countsEnabled": true
+      },
+      "componentType": "message-handler",
+      "properties": {},
+      "output": null,
+      "input": "illegal-argument-channel"
+    },
+    {
+      "nodeId": 10,
+      "name": "print-handler",
+      "stats": {
+        "duration": {
+          "count": 1,
+          "min": 23.879771,
+          "max": 23.879771,
+          "mean": 23.879771,
+          "standardDeviation": 0.0,
+          "countLong": 1
+        },
+        "activeCount": 0,
+        "loggingEnabled": true,
+        "errorCount": 1,
+        "minDuration": 23.879771,
+        "maxDuration": 23.879771,
+        "statsEnabled": true,
+        "handleCount": 2,
+        "meanDuration": 23.879771,
+        "standardDeviationDuration": 0.0,
+        "countsEnabled": true
       },
       "componentType": "service-activator",
       "properties": {},
-      "output": "print.channel",
-      "input": "input.directory.channel"
+      "output": "print-channel",
+      "input": "input-directory-channel"
+    },
+    {
+      "nodeId": 11,
+      "name": "copy-handler",
+      "stats": {
+        "duration": {
+          "count": 1,
+          "min": 16.440302,
+          "max": 16.440302,
+          "mean": 16.440302,
+          "standardDeviation": 0.0,
+          "countLong": 1
+        },
+        "activeCount": 0,
+        "loggingEnabled": true,
+        "errorCount": 0,
+        "minDuration": 16.440302,
+        "maxDuration": 16.440302,
+        "statsEnabled": true,
+        "handleCount": 1,
+        "meanDuration": 16.440302,
+        "standardDeviationDuration": 0.0,
+        "countsEnabled": true
+      },
+      "componentType": "message-handler",
+      "properties": {},
+      "output": "copy-channel",
+      "input": "print-channel"
+    },
+    {
+      "nodeId": 12,
+      "name": "springIntegrationDemoApplication.errorHandler.router",
+      "stats": {
+        "duration": {
+          "count": 1,
+          "min": 0.360513,
+          "max": 0.360513,
+          "mean": 0.360513,
+          "standardDeviation": 0.0,
+          "countLong": 1
+        },
+        "activeCount": 0,
+        "loggingEnabled": true,
+        "errorCount": 0,
+        "minDuration": 0.360513,
+        "maxDuration": 0.360513,
+        "statsEnabled": true,
+        "handleCount": 1,
+        "meanDuration": 0.360513,
+        "standardDeviationDuration": 0.0,
+        "countsEnabled": true
+      },
+      "componentType": "router",
+      "properties": {},
+      "output": "unexpectedErrorChannel",
+      "input": "errorChannel",
+      "routes": [
+        "illegal-argument-channel"
+      ]
     }
   ],
   "links": [
     {
-      "from": 6,
-      "to": 5,
+      "from": 8,
+      "to": 6,
       "type": "output"
-    },
-    {
-      "from": 3,
-      "to": 7,
-      "type": "input"
-    },
-    {
-      "from": 4,
-      "to": 8,
-      "type": "input"
     },
     {
       "from": 8,
       "to": 1,
-      "type": "output"
+      "type": "error"
     },
     {
-      "from": 5,
+      "from": 2,
       "to": 9,
       "type": "input"
     },
     {
-      "from": 9,
+      "from": 6,
+      "to": 10,
+      "type": "input"
+    },
+    {
+      "from": 10,
+      "to": 7,
+      "type": "output"
+    },
+    {
+      "from": 7,
+      "to": 11,
+      "type": "input"
+    },
+    {
+      "from": 11,
       "to": 4,
       "type": "output"
+    },
+    {
+      "from": 1,
+      "to": 12,
+      "type": "input"
+    },
+    {
+      "from": 12,
+      "to": 3,
+      "type": "output"
+    },
+    {
+      "from": 12,
+      "to": 2,
+      "type": "route"
     }
   ]
 }
